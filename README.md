@@ -1,6 +1,6 @@
 # YouTube Downloader
 
-A tiny CLI helper in [playlist.py](playlist.py#L1) that downloads YouTube videos or extracts audio using `yt-dlp`, saving files to `downloads/`.
+A YouTube video and audio downloader with both a **web interface** and **CLI** option. Downloads using `yt-dlp`, saving files to `downloads/`.
 
 ## Requirements
 - Python 3.9+
@@ -22,7 +22,7 @@ A tiny CLI helper in [playlist.py](playlist.py#L1) that downloads YouTube videos
      ```
 3. Install dependencies:
    ```bash
-   pip install -U pip yt-dlp
+   pip install -r requirements.txt
    ```
 4. (Optional) Install FFmpeg if you want MP3 conversion or automatic video muxing:
    - Windows: `winget install ffmpeg` or `choco install ffmpeg`
@@ -30,6 +30,19 @@ A tiny CLI helper in [playlist.py](playlist.py#L1) that downloads YouTube videos
    - Linux: `sudo apt install ffmpeg` (Debian/Ubuntu) or use your distro package manager
 
 ## Usage
+
+### Web Interface (Recommended)
+Start the web server:
+```bash
+python app.py
+```
+Then open your browser to `http://127.0.0.1:5000` and use the web interface to:
+- Enter a YouTube URL
+- Choose between audio or video download
+- Select quality (for video downloads)
+- Click download and files will be saved to `downloads/`
+
+### Command Line Interface
 Run the script and follow the prompts:
 ```bash
 python playlist.py
